@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+}
+.cities {
+    min-width: 250px;
+    border: 1px solid #DCDCDC;
+    color: #495057;
+}
+.five-day {
+    background-color: #007bff;
+    color: #ffffff;
+}

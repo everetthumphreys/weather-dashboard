@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Weather Dashboard</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <h4>Search for a city:</h4>
+                <span id="error"></span>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="cityTerm" placeholder="Search" aria-label="Search"
+                        aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="searchBtn"><i
+                                class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="btn-group-vertical">
+                    <button type="button" class="btn btn-light cities">Atlanta</button>
+                    <button type="button" class="btn btn-light cities">Austin</button>
+                    <button type="button" class="btn btn-light cities">Rome</button>
+                    <button type="button" class="btn btn-light cities">Toronto</button>
+                    <button type="button" class="btn btn-light cities">London</button>
+                    <button type="button" class="btn btn-light cities">New York City</button>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 id="currentCity">City + Date + Weather Icon</h2>
+                                <p>Temperature: <span id="temp"></span></p>
+                                <p>Humidity: <span id ="hum"></span></p>
+                                <p>Wind Speed: <span id="wind"></span></p>
+                                <p>UV Index: <span id="UVin"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>5 Day Forecast</h2>
+                    </div>
+                </div>
+                <div class="row" id="fiveDay">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/ef9e0f519e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
