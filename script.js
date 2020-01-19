@@ -1,10 +1,12 @@
 $(document).ready(function () {
 
     function showWeather(response) {
-        $("#currentCity").html(response.name);
+        $("#currentCity").html(response.name + " " + moment().format('MMMM Do YYYY'));
         $("#temp").html(response.main.temp + "°F")
+        $("img").insertAfter($("#currentCity")).attr("id", "iconic");
         $("#hum").html(response.main.humidity + "%");
         $("#wind").html(response.wind.speed + "MPH");
+
         console.log(response);
     }
 
@@ -29,11 +31,8 @@ $(document).ready(function () {
         var currentForecast = [];
         for (var i = 0; i < forecast.length; i++) {
             var currentObject = forecast[i];
-            // '12:00:00'[1] is the number of index]
             var dt_time = currentObject.dt_txt.split(' ')[1]
-            // At each index..If...dt_txt === "12:00:00" get info
             if (dt_time === "12:00:00") {
-                // currentObject.main ... time, icon, temp, humidity
                 var main = currentObject.main;
                 var temp = main.temp;
                 var humidity = main.humidity;
@@ -108,7 +107,6 @@ $(document).ready(function () {
     $('.cities').each(function () {
         $(this).on("click", function (event) {
             console.log("called");
-            // event.preventDefault();
             var cityTerm = $(this).attr("id");
             console.log(cityTerm);
             search(cityTerm);
