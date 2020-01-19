@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     function showWeather(response) {
         $("#currentCity").html(response.name + " " + moment().format('MMMM Do YYYY'));
-        $("#temp").html((response.main.temp - 273.15) * 1.8) + 32 + "°F")
+        $("#temp").html(response.main.temp + "°K");
         $("img").insertAfter($("#currentCity")).attr("id", "iconic");
         $("#hum").html(response.main.humidity + "%");
         $("#wind").html(response.wind.speed + "MPH");
