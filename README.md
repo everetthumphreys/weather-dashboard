@@ -10,5 +10,5 @@
 ### View My Web App
 [Click Here](https://everetthumphreys.github.io/weather-dashboard)
 
-![Screenshot](https://raw.githubusercontent.com/everetthumphreys/day-planner/master/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/everetthumphreys/weather-dashboard/master/screenshot.png)
 
